@@ -7,7 +7,7 @@ function generateRandomString($length = 10) {
 
 header.php
 ----------
-<?php
+\<?php
 //SEB
 include_once 'queue_seb.php';
 setcookie( "userlogin", $bdkey ,time()+3600 );
@@ -17,6 +17,28 @@ $_COOKIE['userlogin'] = $bdkey;
 inc/slider.php
 --------------
  <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
+
+httpdocs/wp-content/themes/sydney/scoring.php
+---------------------------------------------
+
+<?php /* Template Name: scoring */ ?>
+<?php
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package Sydney
+ */
+
+get_header(); ?>
+<p> salut les loulous from template page </p>
+ <p  onclick="work()">
+<a href="#">Résultat</a> </p>
+			<p id="result" class="result"></p>
 
 js/main.min.js  UNMINIFIED
 --------------------------
@@ -55,24 +77,4 @@ consume.php
 				};
 
 
-httpdocs/wp-content/themes/sydney/scoring.php
----------------------------------------------
 
-<?php /* Template Name: scoring */ ?>
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package Sydney
- */
-
-get_header(); ?>
-<p> salut les loulous from template page </p>
- <p  onclick="work()">
-<a href="#">Résultat</a> </p>
-			<p id="result" class="result"></p>
