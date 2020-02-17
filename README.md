@@ -7,56 +7,54 @@ function generateRandomString($length = 10) {
 
 header.php
 ----------
-\<?php
-//SEB
-include_once 'queue_seb.php';
-setcookie( "userlogin", $bdkey ,time()+3600 );
-$_COOKIE['userlogin'] = $bdkey;
-/**
+\<?php<br />
+include_once 'queue_seb.php';<br />
+setcookie( "userlogin", $bdkey ,time()+3600 );<br />
+$_COOKIE['userlogin'] = $bdkey;<br />
 
 inc/slider.php
 --------------
- <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
+ \<h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
 
 httpdocs/wp-content/themes/sydney/scoring.php
 ---------------------------------------------
 
-<?php /* Template Name: scoring */ ?>
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package Sydney
- */
+\<?php /* Template Name: scoring */ ?><br />
+\<?php<br />
+\/**<br />
+ \* The template for displaying all pages.<br />
+ \*<br />
+ \* This is the template that displays all pages by default.<br />
+ \* Please note that this is the WordPress construct of pages<br />
+ \* and that other 'pages' on your WordPress site will use a<br />
+ \* different template.<br />
+ \*<br />
+ \* @package Sydney<br />
+ \*/<br />
 
-get_header(); ?>
-<p> salut les loulous from template page </p>
- <p  onclick="work()">
-<a href="#">Résultat</a> </p>
-			<p id="result" class="result"></p>
+\get_header(); ?><br />
+\<p> salut les loulous from template page </p><br />
+\ <p  onclick="work()"><br />
+\<a href="#">Résultat</a> </p><br />
+			<p id="result" class="result"></p><br />
 
 js/main.min.js  UNMINIFIED
 --------------------------
-$(function work() {
-						$('.mainnav a[href*="#"], a.roll-button[href*="#"], .smoothscroll[href*="#"], .smoothscroll a[href*="#"]').on('click',function (work)                {
-				$.ajax({
-				url:"consume.php",
-				data: {action: 'consume'},
-				type: "post", //request type
-				success:function(result){
-				//alert(result);
-				$('#result').html(result);
-				}
-				});
-				}
-				);
+$(function work() {<br />
+						$('.mainnav a[href*="#"], a.roll-button[href*="#"], .smoothscroll[href*="#"], .smoothscroll a[href*="#"]').on('click',function (work)                {<br />
+				$.ajax({<br />
+				url:"consume.php",<br />
+				data: {action: 'consume'},<br />
+				type: "post", //request type<br />
+				success:function(result){<br />
+				//alert(result);<br />
+				$('#result').html(result);<br />
+				}<br />
+				});<br />
+				}<br />
+				);<br />
 
-				});
+				});<br />
 
 
 consume.php
