@@ -71,5 +71,9 @@ consume.php
 				}
 				};
 
-
+amqpconnect.ini
+---------------
+servername=server_ip_or_dns
+username=
+password=
 
