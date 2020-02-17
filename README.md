@@ -14,7 +14,7 @@ $_COOKIE['userlogin'] = $bdkey;<br />
 
 inc/slider.php
 --------------
- \<h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
+ \<h2 class="maintitle">\<?php print_r($_COOKIE["userlogin"]); ?>\</h2>
 
 httpdocs/wp-content/themes/sydney/scoring.php
 ---------------------------------------------
@@ -34,9 +34,9 @@ httpdocs/wp-content/themes/sydney/scoring.php
 
 \get_header(); ?><br />
 \<p> salut les loulous from template page </p><br />
-\ <p  onclick="work()"><br />
-\<a href="#">Résultat</a> </p><br />
-			<p id="result" class="result"></p><br />
+\<p  onclick="work()"><br />
+\<a href="#">Résultat\</a> \</p><br />
+			\<p id="result" class="result">\</p><br />
 
 js/main.min.js  UNMINIFIED
 --------------------------
@@ -54,7 +54,7 @@ $(function work() {<br />
 				}<br />
 				);<br />
 
-				});<br />
+				});
 
 
 consume.php
