@@ -73,7 +73,7 @@ consume.php
 
 amqpconnect.ini
 ---------------
-servername=server_ip_or_dns
-username=
-password=
+servername=server_ip_or_dns<br />
+username=<br />
+password=<br />
 
