@@ -31,12 +31,10 @@ httpdocs/wp-content/themes/sydney/scoring.php
  \*<br />
  \* @package Sydney<br />
  \*/<br />
-
 \get_header(); ?><br />
-\<p> salut les loulous from template page </p><br />
 \<p  onclick="work()"><br />
 \<a href="#">Résultat\</a> \</p><br />
-			\<p id="result" class="result">\</p><br />
+\<p id="result" class="result">\</p><br />
 
 js/main.min.js  UNMINIFIED
 --------------------------
@@ -61,7 +59,6 @@ consume.php
 -----------
  $exchange->getArgument($o);
 
-		////////
 				$callback_func = function(AMQPEnvelope $message, AMQPQueue $queue) use (&$max_jobs) {
 				global $i;
 				//echo json_encode($message->getBody()). "\n";
