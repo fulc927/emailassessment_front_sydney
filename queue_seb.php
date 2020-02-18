@@ -42,6 +42,8 @@ try {
 	//$queue->setArgument(expiration => 5000);
 		//$queue->setArgument('x-message-ttl', 42);
 	$queue->setArgument('x-expires', 9900000);
+	//9900000 ça fait 165minutes
+	//99000   ça fait 1.65 minute
 	$queue->declareQueue();
 	$queue->bind($exchange_name2, $bdkey);
     } catch(AMQPQueueException $queue) {
