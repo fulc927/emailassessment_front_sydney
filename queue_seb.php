@@ -2,7 +2,7 @@
 //session_start();
 //function test(){
 $connection = new AMQPConnection();
-$config = parse_ini_file('./amqpconnect.ini'); 
+$config = parse_ini_file('amqpconnect.ini'); 
 $connection->setHost($config['servername']);
 //$connection->setHost('localhost');
 $connection->setLogin($config['username']);
