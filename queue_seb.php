@@ -9,6 +9,7 @@ $connection->setLogin($config['username']);
 //$connection->setLogin('fulc');
 $connection->setPassword($config['password']);
 //$connection->setPassword('fulc');
+try {
 $connection->connect();
 $channel = new AMQPChannel($connection);
 try {
@@ -52,6 +53,11 @@ try {
 	print_r($queue);	
 $connection->disconnect();
 	}	
+} catch(Exception $connection) {
+                //PAGE DE MAINTENANCE QUAND RABBITMQ EST COUPÉ
+                //echo "le AMQP channel montepas0";
+                //print_r($connection);
+}
 //}
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
