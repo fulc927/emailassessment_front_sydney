@@ -85,11 +85,13 @@ function sydney_slider_template() {
 <!-- SEB seb
                         <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>   -->
                             
-                            <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
-                            
-                            if ( typeof userName === 'undefined' || !userName ) {
+                            <h2 class="maintitle"><?php if ( typeof userName === 'undefined' || !userName ) {
     alert('empty');
 }
+                print_r($_COOKIE["userlogin"]);
+                                ?></h2>
+                            
+                            
                             
                             
                         <p class="subtitle"><?php echo esc_html( $subtitles['slider_subtitle_' . $c] ); ?></p>
