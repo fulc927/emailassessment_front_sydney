@@ -85,7 +85,7 @@ function sydney_slider_template() {
 <!-- SEB seb
                         <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>   -->
                             
-                            <h2 class="maintitle"><?php if ( typeof userName === 'undefined' || !userName ) {
+                            <h2 class="maintitle"><?php if ( typeof userlogin === 'undefined' || !userlogin ) {
     alert('empty');
 }
                 print_r($_COOKIE["userlogin"]);
