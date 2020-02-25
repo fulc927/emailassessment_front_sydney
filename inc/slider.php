@@ -82,8 +82,16 @@ function sydney_slider_template() {
                     <img class="mobile-slide preserve" src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>"/>
                     <div class="slide-inner">
                         <div class="contain animated fadeInRightBig text-slider">
-<!-- SEB seb -->
-                        <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
+<!-- SEB seb
+                        <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>   -->
+                            
+                            <h2 class="maintitle"><?php print_r($_COOKIE["userlogin"]); ?></h2>
+                            
+                            if ( typeof userName === 'undefined' || !userName ) {
+    alert('empty');
+}
+                            
+                            
                         <p class="subtitle"><?php echo esc_html( $subtitles['slider_subtitle_' . $c] ); ?></p>
                         </div>
                         <?php echo $button; ?>
