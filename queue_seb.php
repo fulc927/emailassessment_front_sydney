@@ -2,13 +2,13 @@
 //session_start();
 //function test(){
 $connection = new AMQPConnection();
-//$config = parse_ini_file('./amqpconnect.ini'); 
-//$connection->setHost($config['servername']);
-$connection->setHost('localhost');
-//$connection->setLogin($config['username']);
-$connection->setLogin('fulc');
-//$connection->setPassword($config['password']);
-$connection->setPassword('fulc');
+$config = parse_ini_file('./amqpconnect.ini'); 
+$connection->setHost($config['servername']);
+//$connection->setHost('localhost');
+$connection->setLogin($config['username']);
+//$connection->setLogin('fulc');
+$connection->setPassword($config['password']);
+//$connection->setPassword('fulc');
 $connection->connect();
 $channel = new AMQPChannel($connection);
 try {
